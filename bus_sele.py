@@ -31,4 +31,5 @@ driver.find_element_by_xpath('//*[@id="dlBus"]/dd[2]/button/img').click()
 # url2 = driver.current_url
 # # driver.get(url2)
 time.sleep(2)   
-driver.find_element_by_css_selector('body > div > div:nth-child(1) > p.btmore > a:nth-child(2) > img').click()
+driver.find_element_by_css_selector('body > div > div:nth-child(1) > p.btmore > a:nth-child(2) ').click()
+
