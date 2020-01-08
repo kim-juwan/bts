@@ -13,22 +13,29 @@ chrome_options.add_argument('disable-gpu') # 가속 사용 x
 chrome_options.add_argument('lang=ko_KR') # 가짜 플러그인 탑재
 
 
-# id_sql = 'SELECT ID FROM REST'
-# cursor.execute(id_sql)
-# rows = cursor.fetchall()
+# # id_sql = 'SELECT ID FROM REST'
+# # cursor.execute(id_sql)
+# # rows = cursor.fetchall()
 
-driver = webdriver.Chrome('./chromedriver.exe', options=chrome_options)
-url = 'http://bus.busan.go.kr/busanBIMS/bus_map/map_main.asp?menuNum=2&amp;mapGubun=undefined'
+# driver = webdriver.Chrome('./chromedriver.exe', options=chrome_options)
+# url = 'http://bus.busan.go.kr/busanBIMS/bus_map/map_main2.asp?menuNum=4&mapGubun=daum'
 
-driver.get(url)
-time.sleep(2) #데이터 뜰때까지 기다려주는 시간
+# driver.get(url)
+# time.sleep(4) #데이터 뜰때까지 기다려주는 시간
 
-driver.find_element_by_xpath('//*[@id="key"]').send_keys('96-1')
+# driver.find_element_by_xpath('//*[@id="txtLineNum"]').send_keys('96-1')
 
-time.sleep(1)
+# time.sleep(1)
 
-driver.find_element_by_xpath('//*[@id="dlBus"]/dd[2]/button/img').click()
-# url2 = driver.current_url
-# # driver.get(url2)
-time.sleep(2)   
-driver.find_element_by_css_selector('body > div > div:nth-child(1) > p.btmore > a:nth-child(2) > img').click()
+# driver.find_element_by_xpath('//*[@id="am_topm2_5"]/ul/li[5]/button/img').click()
+# url1 = driver.current_url
+# html = requests.get(url1)
+# soup = BeautifulSoup(html.content,'lxml')
+# print(soup)
+
+url = 'http://121.174.75.24/bims_web/popup2/RealTimeBus.aspx?BNUM=96-1'
+
+html = urllib.request.urlopen(url)
+soup = BeautifulSoup(html,'lxml')
+
+print(soup)
