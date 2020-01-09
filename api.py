@@ -6,12 +6,13 @@ import cx_Oracle as oci
 conn = oci.connect('admin/1234@192.168.99.100:32764/xe',encoding='utf-8')
 cursor = conn.cursor()
 
-select_sql = 'SELECT (BUSTOPID,X,Y) FROM BUS'
+select_sql = 'SELECT BUSTOPID,X,Y FROM BUS'
 cursor.execute(select_sql)
 xys = cursor.fetchall()
 
 for xy in xys:
     bustop = xy[0]
+    print(bustop)
     x = xy[1]
     y = xy[2]
     open_api = 'https://dapi.kakao.com/v2/local/geo/coord2address.json?x=%s&y=%s&input_coord=WGS84'%(x,y)
@@ -20,9 +21,12 @@ for xy in xys:
     res = requests.get(open_api, headers={'Authorization' : 'KakaoAK ' + api_key } )
     dic1 = res.json()
 
-    result = dic1['documents'][0]['address']
 
-    data = [result['region_1depth_name'],result['region_2depth_name'],result['region_3depth_name'],bustop]
-    update_sql = 'UPDATE BUS SET 시도=:1, 시군구=:2, 읍면동=:3 WHERE BUSTOPID=:4'
-    cursor.execute(update_sql,data)
-    conn.commit()
+    try:
+        result = dic1['documents'][0]['address']
+        data = [result['region_1depth_name'],result['region_2depth_name'],result['region_3depth_name'],bustop]
+        update_sql = 'UPDATE BUS SET 시도=:1, 시군구=:2, 읍면동=:3 WHERE BUSTOPID=:4'
+        cursor.execute(update_sql,data)
+        conn.commit()
+    except:
+        pass
