@@ -1,11 +1,11 @@
 import os
 import cx_Oracle as oci
 import csv
-
+import codecs
 conn = oci.connect('admin/1234@192.168.99.100:32764/xe',encoding='utf-8')
 cursor = conn.cursor()
 
-with open('./bus.csv') as fp:
+with open('./bus.csv',encoding='euc-kr') as fp:
     rd = csv.reader(fp)
     next(rd)
     for row in rd:
