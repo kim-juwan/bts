@@ -20,10 +20,9 @@ for xy in xys:
     res = requests.get(open_api, headers={'Authorization' : 'KakaoAK ' + api_key } )
     dic1 = res.json()
 
-    result = dic1['documents'][0]['address']['address_name']
+    result = dic1['documents'][0]['address']
 
-    print(result)
-
-    update_sql = 'UPDATE BUS SET 시군구=:1, 읍면동=:2 WHERE BUSTOPID=:3'
-    cursor.execute(sql,data)
+    data = [result['region_1depth_name'],result['region_2depth_name'],result['region_3depth_name'],bustop]
+    update_sql = 'UPDATE BUS SET 시도=:1, 시군구=:2, 읍면동=:3 WHERE BUSTOPID=:4'
+    cursor.execute(update_sql,data)
     conn.commit()

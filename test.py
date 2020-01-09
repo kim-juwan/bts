@@ -10,7 +10,7 @@ api_key = 'f56b92905ade194d1254314f9e91d103'
 res = requests.get(open_api, headers={'Authorization' : 'KakaoAK ' + api_key } )
 dic1 = res.json()
 
-result = dic1['documents'][0]['address']['address_name']
-
-print(result)
+result = dic1['documents'][0]['address']
+data = [result['region_1depth_name'],result['region_2depth_name'],result['region_3depth_name']]
+print(data)
 
