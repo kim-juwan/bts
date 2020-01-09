@@ -24,7 +24,6 @@ for xy in xys:
     dic1 = res.json()
     try:
         result = dic1['documents'][0]['address']
-
         data = [result['region_1depth_name'],result['region_2depth_name'],result['region_3depth_name'],bustop]
         update_sql = 'UPDATE BUS SET 시도=:1, 시군구=:2, 읍면동=:3 WHERE NO=:4'
         cursor.execute(update_sql,data)
