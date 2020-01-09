@@ -231,9 +231,9 @@
             if ( win.w > 0.8*win.h ) {
                 this.DOM.img.style.transformOrigin = '50% 50%';
                 Object.assign(imgAnimeOpts, {
-                    scaleX: 0.95*win.w/parseInt(0.8*win.h),
-                    scaleY: 0.95*win.w/parseInt(0.8*win.h),
-                    rotate: 90
+                    scaleX: 0.50*win.w/parseInt(0.8*win.h),
+                    scaleY: 0.50*win.w/parseInt(0.8*win.h),
+                    rotate: 0
                 });
             }
             anime(imgAnimeOpts);
