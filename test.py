@@ -4,7 +4,7 @@ import time, urllib.request, requests, json, csv, random, os
 from selenium.webdriver import ChromeOptions
 import cx_Oracle as oci
 
-open_api = 'https://dapi.kakao.com/v2/local/geo/coord2address.json?x=%s&y=%s&input_coord=WGS84'%(129.0351545,35.10277284)
+open_api = 'https://dapi.kakao.com/v2/local/geo/coord2address.json?x=%s&y=%s&input_coord=WGS84'%(128.98336739,35.215375375)
 api_key = 'f56b92905ade194d1254314f9e91d103'
 
 res = requests.get(open_api, headers={'Authorization' : 'KakaoAK ' + api_key } )
