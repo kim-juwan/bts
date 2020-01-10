@@ -57,9 +57,30 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-
+	@keyframes slidein {
+		from { transform: translateX(0); }
+		to   { transform: translateX(-700px); }
+	  }
 /* Grid */
-
+	.taxi_move{
+		height:10px;
+		width: 10px;
+		animation: 3s infinite running slidein;
+		/* -webkit-animation: 4s linear 0s infinite alternate move_eye; */
+		
+	}
+	.taxi_move:active{
+/* 		transform:translate(0,0);
+		/* transition-property:opacity ; */
+		/* animation:translateX(-700px);
+		transition: 1s;
+		animation-duration: 1s; */
+		/* transform:translateX(0px);
+		-webkit-transform:translate(-700px,0);
+		-moz-transform:translate(-700px,0);
+		-ms-transform:translate(-700px,0);
+		-o-transform:translate(-700px,0); */
+	}
 	.row {
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
