@@ -5,7 +5,10 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-
+@font-face {
+	font-family: 'BMDO';
+	src: url('/static/fonts/BMDOHYEON_ttf.ttf')
+   }
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1429,7 +1432,7 @@
 	}
 
 	body, input, select, textarea {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'BMDO';
 		font-size: 13pt;
 		font-weight: normal;
 		line-height: 2;
@@ -3196,10 +3199,11 @@
 /* Banner */
 
 	#banner {
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #4A4771 0%, #7C3875 100%);
+		
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #ffffff 0%, #ffffff 100%);
+		/* background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #ffffff 0%, #ffffff 100%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #fff 0%, #ffffff 100%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #ffffff 0%, #ffffff 100%); */
 		background-size: 100px 100px, cover;
 		color: rgba(255, 255, 255, 0.5);
 		padding: 14em 0 4em;
@@ -3209,14 +3213,15 @@
 			font-size: 2.5em;
 			line-height: 1.4;
 			margin-bottom: 0;
-			color: #fff;
+			color: rgb(12, 89, 141);
 		}
 
 		#banner p {
-			font-size: 1.15em;
+			font-size: 2.15em;
 			font-weight: bold;
 			line-height: 1.5em;
 			margin-bottom: 1.5em;
+			color: rgb(12, 89, 141);
 		}
 
 		#banner > .inner {
@@ -3224,6 +3229,7 @@
 			margin-right: auto;
 			max-width: 70em;
 			width: 100%;
+			color: #fff;
 		}
 
 		@media screen and (max-width: 1366px) {
