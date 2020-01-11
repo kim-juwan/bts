@@ -31,6 +31,9 @@
 	.spotlight .content {
 		float: left;
 	}
+	.spotlight .grid {
+		float: left;
+	}
 
 /* Banner */
 
