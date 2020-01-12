@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('index',views.index,name='index'),
     path('index2',views.index2,name='index2'),
+    path('busanmap',views.busanmap,name='busanmap'),
 ]
