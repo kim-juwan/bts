@@ -22,7 +22,7 @@
             <h3 class="details__subtitle"></h3>
             <div class="details__price"></div>
             <p class="details__description"></p>
-            <button class="details__addtocart">Add to cart</button>
+            <hidden class="details__addtocart" ></hidden>
             <button class="details__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
             <button class="details__magnifier"><svg class="icon icon--magnifier"><use xlink:href="#icon-magnifier"></use></svg></button>
             `;

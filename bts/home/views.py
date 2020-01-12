@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+import pandas as pd
+import folium
+import json
+from folium.features import DivIcon
+import cx_Oracle as oci
+import matplotlib.pyplot as plt
 
 def home(request):
     return render(request,'home.html')

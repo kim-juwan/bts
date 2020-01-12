@@ -21,7 +21,7 @@ conn = oci.connect('admin/1234@192.168.99.100:32764/xe',encoding='utf-8')
  
 cursor = conn.cursor()
  
-cursor.executemany("INSERT INTO FP (NO, 연도, 월, 요일, 시군구, 읍면동, 유동인구) VALUES (fp_no.NEXTVAL,:1,:2,:3,:4,:5,:6)", rows)
+cursor.executemany("INSERT INTO FP_WEEK (NO, 연도, 월, 요일, 시군구, 읍면동, 유동인구) VALUES (fp_no.NEXTVAL,:1,:2,:3,:4,:5,:6)", rows)
 conn.commit()
  
  
