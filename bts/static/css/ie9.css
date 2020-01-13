@@ -5,7 +5,9 @@
 */
 
 /* Split */
-
+.spotlight .grid {
+	float: left;
+ }
 	.split:after {
 		content: '';
 		display: block;
