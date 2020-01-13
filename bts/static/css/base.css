@@ -7,6 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 html {
 	background: #fff;
+	width: 100%;
 }
 @font-face {
 	font-family: 'BMDO';
@@ -22,9 +23,9 @@ body {
 	--color-menu-hover: #000;
 	--grid-columns: 2;
 	--details-bg-up: #fff;
-	--details-bg-down: #f5f0ef;
+	--details-bg-down: #fff;
 	--color-product-title: #000;
-	--color-product-subtitle: #a09897;
+	--color-product-subtitle: #fff;
 	--color-details-title: #000;
 	--color-details-subtitle: #000;
 	--color-descr: #000;
@@ -34,7 +35,7 @@ body {
 	--color-close: #000;
 	--color-bg-magnifier: #000;
 	--color-magnifier: #fff;
-	--color-btn-hover: #c1b3b1;
+	--color-btn-hover: #fff;
 	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
 	font-family: 'BMDO';
 	min-height: 100vh;
