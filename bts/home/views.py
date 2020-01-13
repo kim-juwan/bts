@@ -20,7 +20,7 @@ def index(request):
         name = request.POST['name']
         email = request.POST['email']
         message = request.POST['message']
-        with open('./QnA.csv','a',encoding='utf-8') as fp:
+        with open('./QnA.csv','a',encoding='euc-kr',newline='') as fp:
             wr = csv.writer(fp, delimiter=',')
             wr.writerow([name,email,message])
         return render(request,'index.html')

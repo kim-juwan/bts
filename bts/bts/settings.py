@@ -25,7 +25,8 @@ SECRET_KEY = 'xr3r31y_66fj_vh^h5lnv#q+=is9lp#!&022jx_0j85l8kxpyz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.81',
+'127.0.0.1']
 
 
 # Application definition
@@ -74,16 +75,16 @@ WSGI_APPLICATION = 'bts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'xe', 
-        'USER': 'admin',
-        'PASSWORD': '1234',
-        'HOST': '192.168.99.100',
-        'PORT': '32764'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'xe', 
+#         'USER': 'admin',
+#         'PASSWORD': '1234',
+#         'HOST': '192.168.99.100',
+#         'PORT': '32764'
+#     }
+# }
 
 
 # Password validation
