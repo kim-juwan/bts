@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 import csv
-
+from time import time
 @csrf_exempt
 def home(request):
     if request.method == "GET":
@@ -12,9 +12,10 @@ def home(request):
         name = request.POST['name']
         email = request.POST['email']
         message = request.POST['message']
+        ptime = time()
         with open('./QnA.csv','a',encoding='euc-kr',newline='') as fp:
             wr = csv.writer(fp, delimiter=',')
-            wr.writerow([name,email,message])
+            wr.writerow([ptime,name,email,message])
         return render(request,'home.html')
 
 

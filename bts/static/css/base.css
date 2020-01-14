@@ -34,7 +34,7 @@ body {
 	--color-addtocart: #fff;
 	--color-close: #000;
 	--color-bg-magnifier: #000;
-	--color-magnifier: #fff;
+	--color-magnifier: rgb(12, 89, 141);;
 	--color-btn-hover: #fff;
 	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
 	font-family: 'BMDO';
@@ -208,7 +208,8 @@ main {
 
 .product__img {
 	max-height: 25em;
-	margin: 0 auto;
+	width: 30em;
+	margin: 0;
 	display: block;
 	position: absolute;
 	float: left;
@@ -221,8 +222,8 @@ main {
 
 .product__title {
 	position: relative;
-	margin: 0.5em 0 0;
-	font-size: 1.75em;
+	margin: -0.5em 0 0;
+	font-size: 2em;
 	color: var(--color-product-title);
 	/* font-family: "Playfair Display", serif; */
 	font-weight: 700;
@@ -450,7 +451,7 @@ main {
 		height: 10em;
 	}
 	.product__img {
-		max-height: 19em;
+		max-height: 30em;
 	}
 	.product__title {
 		font-size: 1.25em;

@@ -270,7 +270,12 @@
 /* Second Slide */
 .demo-1 .bg-2 .sl-slide-inner,
 .demo-1 .bg-2 .sl-content-slice {
-	background: #000;
+	background: #f3f3f3;
+	background-image: url('../images/코드.jpg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	
 }
 
 .demo-1 .bg-2 [data-icon]:after,

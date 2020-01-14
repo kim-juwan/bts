@@ -270,7 +270,11 @@
 /* Second Slide */
 .demo-1 .bg-2 .sl-slide-inner,
 .demo-1 .bg-2 .sl-content-slice {
-	background: #000;
+	background: #b8b8b8;
+	background-image: url('../images/팀원소개.jpg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .demo-1 .bg-2 [data-icon]:after,
@@ -347,7 +351,11 @@
 /* Fifth Slide */
 .demo-1 .bg-5 .sl-slide-inner,
 .demo-1 .bg-5 .sl-content-slice {
-	background: #ffeb41;
+	background: rgb(31,78,121);
+	background-image: url('../images/wbs.jpg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 	
 }
 
